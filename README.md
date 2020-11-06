@@ -27,11 +27,11 @@ $elimage = new elimage;
 
 `$elimage->width` {Numeric} (the new image width - respecting the original aspect ratio)
 
-`$elimage->lock` - {Boolean} (if you don't want to change the image dimention, set this option to TRUE)
+`$elimage->lock` - {Boolean} (if you don't want to change the image dimension, set this option to TRUE)
 
 * Note: it's required to use one of the above options "width" or "lock".
 
-## Sample usage (custom width)
+## Sample usage (new custom dimensions based on width)
 
 ```php
 /* new elimage object */
@@ -49,7 +49,7 @@ $new_image_path = $image->apply();
 ```
 
 
-## Sample usage (original image dimentions)
+## Sample usage (preserve original image dimensions)
 
 ```php
 /* new elimage object */
@@ -66,11 +66,6 @@ $image->quality = 90;
 $new_image_path = $image->apply();
 ```
 
+## Demo
 
-
-
-
-
-
-
-
+https://uplody.com/elimage/
