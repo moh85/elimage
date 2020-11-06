@@ -22,7 +22,7 @@ if($old_x == $old_y) { $thumb_w = $this->width; $thumb_h = $this->height; }
 $dst_img = ImageCreateTrueColor($thumb_w,$thumb_h);
 imagecopyresampled($dst_img,$src_img,0,0,0,0,$thumb_w,$thumb_h,$old_x,$old_y); 
 if($mime['mime']=='image/png'){
-$result = imagepng($dst_img,$this->old, ($this->quality>=0&&$this->quality<=9?$this->quality:9)); }
+$result = imagepng($dst_img,$this->old, ($this->quality>=1&&$this->quality<=9?$this->quality:9)); }
 if($mime['mime']=='image/jpg' || $mime['mime']=='image/jpeg'){ 
 $result = imagejpeg($dst_img, $this->new, $this->quality); }
 imagedestroy($dst_img); imagedestroy($src_img); return $this->new;
