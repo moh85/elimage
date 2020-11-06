@@ -13,7 +13,7 @@ if($mime['mime']=='image/png'){ $src_img = imagecreatefrompng($this->old); }
 if($mime['mime']=='image/jpg' || $mime['mime']=='image/jpeg'){ $src_img = imagecreatefromjpeg($this->old); }   
 $old_x = imageSX($src_img); $old_y = imageSY($src_img);
 if((strlen($this->width) > 0 && is_numeric($this->width)) || $this->lock); 
-else { exit('elimage error: "width" isn\'t set'); } 
+else { exit('elimage error: "width" or "lock" isn\'t set'); } 
 if($this->lock){ $this->width = $old_x; }
 $this->height = $this->width;
 if($old_x > $old_y) { $thumb_w = $this->width; $thumb_h = $old_y * ($this->height/$old_x); }
